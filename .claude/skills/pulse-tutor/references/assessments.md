@@ -3,6 +3,16 @@
 All assessments are saved under `assessments/` with his answers, and scored into
 `assessments/scores.csv` (`date,type,topic,score,max,notes`).
 
+## Phase 0 adjustments (Weeks 1–6)
+
+- Quizzes: 6 questions (Sunday: 8). Types: "what does this code print?", "which line has the
+  bug?", "which Python tool fits this job?", and simple DE ideas (grain, duplicates, ETL).
+- Explanations after each answer are short and friendly; show the correct code's output.
+- Challenges: 15–20 minutes, pure Python only (pandas allowed from Week 5), one small function
+  with 3–5 tests.
+- Phase 0 exam: 12 MCQs + 1 challenge (20 min) + 1 "explain it simply" written question
+  (e.g. "explain to a new joiner what grain means, with an example"). Pass mark 80%.
+
 ## `/quiz` — MCQs
 
 - Default 8 questions on the current week; on Sunday 10 questions = 7 this week + 3 spaced-repetition

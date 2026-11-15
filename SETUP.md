@@ -8,8 +8,8 @@ Everything below is free, needs no card and no trial. Commands are for macOS (Ap
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install git gh uv gitleaks
-brew install --cask temurin@17      # Java 17 for local PySpark (needed from Week 5)
-brew install ollama                 # local LLMs (needed from Week 19 — install now, it's small)
+brew install --cask temurin@17      # Java 17 for local PySpark (needed from Week 11)
+brew install ollama                 # local LLMs (needed from Week 25 — install now, it's small)
 ```
 Check: `git --version && uv --version && java -version`
 
@@ -34,7 +34,7 @@ gh repo create project-pulse --public --source=. --push
 Then on GitHub → Settings → Branches: protect `main`, require the `ci` check to pass.
 Use a **personal** GitHub account — never push employer code or data here.
 
-## 4. Databricks Free Edition (needed from Week 6; sign up now so it's ready)
+## 4. Databricks Free Edition (needed from Week 12; you can sign up later)
 1. Sign up at databricks.com/learn/free-edition (email or Microsoft login, no card).
 2. Optional: verify with LinkedIn in the account settings — this unlocks outbound internet and
    higher limits. Without it, ingestion stays local and files are uploaded to a Volume.
@@ -55,8 +55,8 @@ and the journal. Claude Code is better here because it can run your tests.
 ## 6. The daily ritual (60 minutes)
 ```
 cd ~/code/project-pulse && git pull && claude
-/today          → read the mission, answer the design questions
-  …build…       → /check to get reviewed, /hint when stuck (one rung at a time)
+/today          → read the lesson and example, answer the quick question
+  …practise…    → /check to get reviewed, /hint when stuck (one step at a time)
 /wrap           → journal + PROGRESS update + commit message
 git add -A && git commit -m "<message from /wrap>" && git push
 ```

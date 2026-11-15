@@ -9,6 +9,11 @@ interview.
 - Senior Data Engineer (Snowflake, Kimball, MERGE-based loads, hash surrogate keys).
 - Python: basics (variables, lists, dicts, loops, functions). Prior C++.
 - Machine: MacBook, Apple M5, 16 GB RAM. 1 hour/day, every day.
+- **Priority:** Python for data engineering first (Phase 0, Weeks 1–6), from the basics, with
+  core DE ideas (grain, ETL, duplicates, idempotency, joins) introduced simply along the way.
+  Tooling (environments, CI) comes later, in Week 7.
+- **Preferred teaching style:** simple, conversational, step by step: plain explanation → tiny
+  example with output → small exercise. SQL analogies help; dense jargon doesn't.
 
 ## Toolchain (all ₹0, no card, no trial)
 | Need | Tool | Licence |
@@ -26,7 +31,7 @@ interview.
 | Cloud twin | Databricks Free Edition | free, proprietary |
 | Databricks tooling | Databricks CLI + Asset Bundles | free, Databricks licence |
 
-## Databricks Free Edition — known constraints (verify again in Week 6)
+## Databricks Free Edition — known constraints (verify again in Week 12)
 - Serverless compute only; small sizes and daily fair-use quotas.
 - Outbound internet limited to trusted domains unless verified with LinkedIn → ingestion runs
   locally and files are uploaded to a Unity Catalog Volume.
@@ -34,6 +39,8 @@ interview.
 - Inactive accounts may be deleted → the repo, not the workspace, is the source of truth.
 
 ## Architecture
+Phase 0 (Weeks 1–6) is plain Python on small files in `gym/data/`, ending with a mini pipeline
+(`raw/ → clean/ → report`) in `src/pulse/mini_pulse/`. The full platform starts in Week 7:
 ```
 Chaos Mart API ──(rate-limited client, local)──▶ landing/ (JSONL + manifest)
         └─▶ Bronze (Delta, append-only, ingest metadata)

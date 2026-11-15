@@ -1,6 +1,6 @@
 # Chaos Mart — build spec for the tutor (spoilers; Shaik should not read)
 
-Build this on **Week 1, Day 5** into `sources/chaos_mart/` (`server.py`, `generator.py`,
+Build this on **Week 7, Day 5** into `sources/chaos_mart/` (`server.py`, `generator.py`,
 `chaos.yaml`). Stack: FastAPI + uvicorn + Faker, seeded RNG so every run is reproducible.
 Run with `uv run python -m sources.chaos_mart.server` on `localhost:8800`.
 
@@ -24,7 +24,7 @@ deliberately incomplete in the ways listed under "Doc lies".
   INR → paise for `partner_id=P07`
 - `cursor_repeat_bug: false`
 - Timestamps: mix of `Z`, `+05:30` and naive strings (naive means IST — undocumented)
-- `support_tickets.body` occasionally contains prompt-injection text (Phase 7)
+- `support_tickets.body` occasionally contains prompt-injection text (Phase 8)
 
 ## Doc lies (what API_DOCS.md gets wrong or omits)
 - Says timestamps are "UTC"; they are not always.

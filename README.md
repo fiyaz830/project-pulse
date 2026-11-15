@@ -4,7 +4,7 @@
 > This README is written like an operations log: what the system does, what broke, why,
 > and what changed so it can't break that way again.
 
-![status](https://img.shields.io/badge/phase-0%20workshop-blue) ![streak](https://img.shields.io/badge/streak-0%20days-orange)
+![status](https://img.shields.io/badge/phase-0%20python%20for%20DE-blue) ![streak](https://img.shields.io/badge/streak-0%20days-orange)
 
 ## 1. What this system does
 Ingests Pulse Retail's orders, customers, products, payments, refunds, inventory and support
@@ -37,8 +37,9 @@ How to rerun, backfill, recover and rotate secrets: [`docs/runbooks/`](docs/runb
 ```bash
 uv sync
 uv run pytest
-uv run python -m sources.chaos_mart.server   # vendor sandbox (from Week 1)
-make pipeline                                # end-to-end local run (from Phase 2)
+uv run python gym/python/w01/d1_receipt.py   # Phase 0 practice scripts (Weeks 1–6)
+uv run python -m sources.chaos_mart.server   # vendor sandbox (from Week 7)
+make pipeline                                # end-to-end local run (from Phase 3)
 ```
 
 ## 8. Learning log

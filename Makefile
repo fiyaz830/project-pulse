@@ -6,7 +6,7 @@ test:
 lint:
 	uv run ruff check . && uv run ruff format --check . && uv run mypy src
 check: lint test
-vendor: ## start the Chaos Mart sandbox (from Week 1 Day 5)
+vendor: ## start the Chaos Mart sandbox (from Week 7 Day 5)
 	uv run python -m sources.chaos_mart.server
-pipeline: ## end-to-end local run (you build this in Phase 2+)
+pipeline: ## end-to-end local run (you build this in Phase 3+)
 	@echo "Not built yet — that's your job."
