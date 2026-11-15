@@ -4,9 +4,9 @@
 
 ## Now
 - **Phase:** 0 — Python for Data Engineering
-- **Week:** 1  ·  **Day:** 0 (next session = W1 D1, Mon 16 Nov 2026: running a script, variables, f-strings)
-- **Streak:** 0 days  ·  **Longest streak:** 0
-- **Open thread:** —
+- **Week:** 1  ·  **Day:** 1 done (early, Sun 15 Nov). Next session = W1 D2, Mon 16 Nov 2026: lists (`len`, `sum`, `min`, `max`, indexing, slicing)
+- **Streak:** 1 day  ·  **Longest streak:** 1
+- **Open thread:** quick check of `:,.2f` formatting before starting lists
 - **Note (15 Nov 2026):** curriculum restructured to be Python-first with a simpler teaching
   style. The environment/tooling week moved to Week 7.
 
@@ -25,10 +25,12 @@
 | 9 | Capstone | 30 | | ☐ | ☐ | 🔒 |
 
 ## Concepts owned (can explain to an interviewer)
--
+- Variable vs `print` (a variable stores a value, `print` shows it)
+- Basic f-strings
 
 ## Weak spots (revisit in Sunday quizzes)
--
+- f-string number formatting `:,.2f` (what each part means, and that the order matters)
+- Silent bad data: `qty = 0` or a negative price runs without any error
 
 ## Parking lot (ideas for later — don't chase them today)
--
+- Indian-style digit grouping (₹1,09,563.00). Python's `,` gives Western grouping only.
