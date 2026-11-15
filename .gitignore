@@ -1,0 +1,39 @@
+# secrets & local config
+.env
+.env.*
+!.env.example
+.databrickscfg
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# data — never commit data, only tiny fixtures under tests/fixtures/
+data/*
+!data/.gitkeep
+spark-warehouse/
+metastore_db/
+derby.log
+*.parquet
+landing/
+checkpoints/
+
+# databricks bundle state
+.databricks/
+
+# local AI
+.lancedb/
+.chroma/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

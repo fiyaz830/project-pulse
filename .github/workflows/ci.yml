@@ -1,0 +1,28 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v3
+      - run: uv python install 3.12
+      - run: uv sync --all-groups
+      - name: Lint
+        run: uv run ruff check . && uv run ruff format --check .
+      - name: Type check
+        run: uv run mypy src
+      - name: Unit tests
+        run: uv run pytest -m "not integration"
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# Phase 3+: add a data-quality job on fixture data.
+# Phase 5+: add `databricks bundle validate` (needs DATABRICKS_HOST/TOKEN as repo secrets).

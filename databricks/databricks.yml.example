@@ -1,0 +1,13 @@
+# Becomes ./databricks.yml in Week 14. You will design the job graph yourself.
+bundle:
+  name: pulse
+
+include:
+  - databricks/resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://<your-free-edition-workspace>.cloud.databricks.com
