@@ -1,7 +1,7 @@
 order_id = 123
-customer = 'Shariff'
-city = 'Hyderabad'
-item = 'Laptop'
+customer = "Shariff"
+city = "Hyderabad"
+item = "Laptop"
 price = 92850
 qty = 1
 total = price * qty
@@ -17,4 +17,3 @@ print(f"Price of the {item} is ₹{price:,.2f}")
 print(f"Sub-total is ₹{total:,.2f}")
 print(f"GST amount is ₹{gst:,.2f}")
 print(f"Grand total is ₹{grand_total:,.2f}")
-

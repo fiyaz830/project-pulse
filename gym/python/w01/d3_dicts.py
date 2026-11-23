@@ -1,6 +1,9 @@
-order = {"order_id" : 999, "customer": "Shaik", "city": "Rajahmundry", "amount":1250}
+order = {"order_id": 999, "customer": "Shaik", "city": "Rajahmundry", "amount": 1250}
 
-print(f"Order #{order['order_id']} is from customer {order['customer']} in city {order['city']} of amount ₹{order['amount']:,.2f}")
+print(
+    f"Order #{order['order_id']} is from customer {order['customer']} "
+    f"in city {order['city']} of amount ₹{order['amount']:,.2f}"
+)
 
 print(order.get("coupon"))
 print(order.get("coupon", "none"))
