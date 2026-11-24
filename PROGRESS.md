@@ -52,7 +52,7 @@
 - Dict read vs write: `d["k"]` (read) raises KeyError if missing; `d["k"] = v` (write) creates the key and never raises KeyError. Wrong on D3 and D4; correct in the D5 warm-up, but on D5 he again thought `city = o["city"]` could create a key. Rule: a dict on the right of `=` is a read, on the left is a write. Re-test in the next warm-up and the Sunday quiz
 - Rounding: now correct (2, 4, 4 on D4 warm-up); re-check in the Sunday quiz
 - "Loop over the list, not the dict": said "dictionary" first on D4, and "list of dictionaries" / "traverse through dictionary" on D5. `o` is one dict; the loop is over the list
-- Empty list: he guessed "fail?" on D5 (it doesn't crash; it gives zero results). Re-check with `min([])` and an average in the Saturday drill
+- Empty list: he guessed "fail?" on D5 (it doesn't crash; it gives zero results), then missed it again in the 24 Nov quiz (Q4: thought `min([])` returns 0; it raises `ValueError`). Quiet for a sum loop, loud for `min` and for an average. Re-check in the Saturday drill and Sunday quiz
 - Counting per group `counts.get(k, 0) + 1`: needed a second explanation (tally sheet); re-test with a different field in the Sunday quiz
 - Run `uv run ruff format . && uv run ruff check .` before committing (D3 CI failed on E501 and format)
 - A slice returns a list, so it can't be formatted with `:,.2f` directly (loops on W1 D4 fix this)
